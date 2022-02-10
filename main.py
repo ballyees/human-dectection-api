@@ -15,6 +15,9 @@ def read_image_base64(image):
     image = np.asarray(image, dtype=np.uint8)
     return image
 
+def send_gps_count_to_firebase(gps, count):
+    raise NotImplementedError()
+
 @app.route('/')
 async def test(request):
     return json({})
