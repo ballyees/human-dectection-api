@@ -31,6 +31,8 @@ async def test(request):
     image = read_image_base64(json_body['image'])
     count = detector.run_count(image, isRGB, thresh)
     count = int(count)
+    # comment line if you want to test this function
+    send_gps_count_to_firebase(gps, count)
     return json({"count": count})
 
 if __name__ == '__main__':
